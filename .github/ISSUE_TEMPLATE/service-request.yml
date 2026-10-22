@@ -1,0 +1,63 @@
+name: 服务申请
+description: 申请 99 / 150 / 400 三档 AI 环境远程支持（请先读 README 的交付边界）
+title: "[服务申请] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先读 README 的「交付边界」。
+        这里**不要**贴 API Key、密码、身份证、内网地址；敏感信息等确认接单后私聊。
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: 需要的档位
+      description: 不确定就选「还不确定」，我会按你描述的情况建议
+      options:
+        - 99 元 · 单条报错诊断（30 分钟）
+        - 150 元 · 单机基础环境搭建（60-90 分钟）
+        - 400 元 · 指定项目跑通（2 小时）
+        - 还不确定，先描述问题
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 操作系统 / 显卡 / 驱动版本
+      placeholder: Windows 11 + WSL2 Ubuntu 22.04 / RTX 4060 8G / 驱动 551.86
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: 完整报错（从第一行到最后一行）
+      description: 不要只贴最后一句，前面的上下文往往是关键
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 已经试过什么
+      description: 例如换过源、重装过驱动、换过 Python 版本；写「没试过」也可以
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 期望结果
+      description: 例如「跑通 xxx 项目的推理脚本」「能 import torch 并调用 GPU」
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: 确认
+      options:
+        - label: 我已阅读 README 的「交付边界」，知道不承诺一定修好、不接生产数据与账号代登录、不承诺任何经营收益
+          required: true
