@@ -12,6 +12,28 @@
 
 ---
 
+## 服务入口 · 99 / 150 / 400
+
+文档免费；需要有人连上你的机器一起看时，按下面三档来。价格人民币，按次计，不按小时叠加。
+
+| 档位 | 价格 | 适合什么情况 | 入口 |
+|------|------|--------------|------|
+| **A · 单条诊断** | **¥99** | 已有一条明确报错，只要定位原因和下一步命令 | [提交服务申请](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=service-request.yml) |
+| **B · 单机环境搭建** | **¥150** | 新机器从零装好 Python + CUDA + PyTorch，跑通官方示例 | [提交服务申请](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=service-request.yml) |
+| **C · 项目跑通** | **¥400** | 指定开源项目，要在这台机器上真正跑起来 | [提交服务申请](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=service-request.yml) |
+
+不确定属于哪一档，先开 **[免费诊断 Issue](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=free-diagnosis.md)**：不收费、不连你的机器，只回问题类型和最多 3 条下一步命令。
+
+## 免费诊断怎么用
+
+1. 点开 [免费诊断 Issue](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=free-diagnosis.md)，按模板填环境、完整报错、已经试过什么。
+2. 我只回两样：**属于哪类问题** + **最多 3 条可复制命令**。
+3. 免费诊断不承诺修好、不远程、不改代码；需要上手时再走上面的 99 / 150 / 400。
+
+> 公开 Issue 里不要贴 API Key、密码、身份证、内网地址；敏感信息等确认接单后私聊。
+
+---
+
 ## 目录
 
 | # | 故障 | 典型一句话报错 |
@@ -492,6 +514,21 @@ python -m pip download --no-deps -d /tmp/_t certifi
 ```
 
 两个都成功且不出现 warning，才算证书链修好。
+
+---
+
+## 真实报错案例索引（第 11–13 条）
+
+> 3 条公开可复现的报错文本，不是客户案例，不含「已解决 N 例」一类数据；每条都能用给出的命令自行验证。
+> 完整索引：[`cases/README.md`](cases/README.md)
+
+| # | 一句话报错 | 典型场景 | 详细 |
+|---|------------|----------|------|
+| 11 | `Expected all tensors to be on the same device` | 模型在 GPU、输入 / 标签在 CPU | [11-device-mismatch.md](cases/11-device-mismatch.md) |
+| 12 | `CUDA error: no kernel image is available` | 显卡算力与 torch wheel 架构不匹配 | [12-no-kernel-image.md](cases/12-no-kernel-image.md) |
+| 13 | `OSError: [Errno 28] No space left on device` | 缓存 / 临时分区满或 inode 用尽 | [13-no-space-left.md](cases/13-no-space-left.md) |
+
+三条都没解决？开 [免费诊断 Issue](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=free-diagnosis.md)，先确认问题值不值得付费，别直接买服务。
 
 ---
 
