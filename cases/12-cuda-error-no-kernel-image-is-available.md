@@ -1,4 +1,4 @@
-# 12 · no kernel image is available（显卡算力与 wheel 不匹配）
+# 12 · CUDA error: no kernel image is available for execution on the device（显卡算力与 wheel 不匹配）
 
 **现象**
 

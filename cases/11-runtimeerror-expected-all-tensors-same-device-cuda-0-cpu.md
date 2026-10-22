@@ -1,4 +1,4 @@
-# 11 · 张量不在同一个设备（cuda:0 与 cpu）
+# 11 · RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!（张量不在同一设备）
 
 **现象**
 

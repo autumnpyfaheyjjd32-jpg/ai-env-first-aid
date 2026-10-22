@@ -5,9 +5,9 @@
 
 | # | 一句话报错 | 典型场景 | 详细 |
 |---|------------|----------|------|
-| 11 | `Expected all tensors to be on the same device` | 模型在 GPU、输入 / 标签在 CPU | [11-device-mismatch.md](11-device-mismatch.md) |
-| 12 | `CUDA error: no kernel image is available` | 新卡 / 老卡与 torch wheel 架构不匹配 | [12-no-kernel-image.md](12-no-kernel-image.md) |
-| 13 | `OSError: [Errno 28] No space left on device` | 缓存 / 临时分区满、inode 满 | [13-no-space-left.md](13-no-space-left.md) |
+| 11 | `Expected all tensors to be on the same device` | 模型在 GPU、输入 / 标签在 CPU | [11-runtimeerror-expected-all-tensors-same-device-cuda-0-cpu.md](11-runtimeerror-expected-all-tensors-same-device-cuda-0-cpu.md) |
+| 12 | `CUDA error: no kernel image is available` | 新卡 / 老卡与 torch wheel 架构不匹配 | [12-cuda-error-no-kernel-image-is-available.md](12-cuda-error-no-kernel-image-is-available.md) |
+| 13 | `OSError: [Errno 28] No space left on device` | 缓存 / 临时分区满、inode 满 | [13-oserror-errno-28-no-space-left-on-device.md](13-oserror-errno-28-no-space-left-on-device.md) |
 
 ## 还是没解决？
 

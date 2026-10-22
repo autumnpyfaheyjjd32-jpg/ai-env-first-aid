@@ -1,11 +1,17 @@
 # AI 环境急救包 · ai-env-first-aid
 
+> **三档入口**
+>
+> - **免费诊断**：[提交免费诊断 Issue（模板）](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=free-diagnosis.md) —— 不收费、不连机器，只回问题类型 + 最多 3 条下一步命令。
+> - **远程支持三档**：**¥99** 定位一条明确报错并给下一步命令 · **¥150** 新机装好 Python + CUDA + PyTorch 并跑通官方示例 · **¥400** 指定开源项目在这台机器上跑起来。
+> - **先诊断后付费**：先在免费诊断确认问题类型与档位，确认接单范围后再付款，不确认不收款。
+
 10 条最常见的 AI 环境故障，每条按 **现象 → 原因 → 命令 → 验证** 四段写清楚。
 命令都可以直接复制执行；每条最后都有一个「怎么确认真的好了」的验证步骤，不靠感觉。
 
 - 适合：CUDA / PyTorch / conda / pip / WSL2 / HuggingFace 下载 / 端口 / SSL 证书
 - 不适合：让你绕过公司网络管控、破解软件、代登录他人账号
-- 本仓库文档永久免费，随便用；需要人帮你看具体机器时，文末有三档远程服务入口
+- 本仓库文档免费，随便用；需要人帮你看具体机器时，见顶部三档入口
 
 > 说明：本仓库目前**没有客户案例、没有收入数据、没有任何效果承诺**。
 > 下面所有命令都是公开可查的通用排查方法，你可以自己逐条验证。
@@ -460,7 +466,7 @@ python -m pip show -f opencv-python | head -20
 python -m site
 ```
 
-统一用 `python -m pip install`，保证装进当前解释器；IDE 里把 interpreter 指到同一个 `sys.executable`。
+统一用 `python -m pip install`，确保装进当前解释器；IDE 里把 interpreter 指到同一个 `sys.executable`。
 
 **验证**
 
@@ -524,9 +530,9 @@ python -m pip download --no-deps -d /tmp/_t certifi
 
 | # | 一句话报错 | 典型场景 | 详细 |
 |---|------------|----------|------|
-| 11 | `Expected all tensors to be on the same device` | 模型在 GPU、输入 / 标签在 CPU | [11-device-mismatch.md](cases/11-device-mismatch.md) |
-| 12 | `CUDA error: no kernel image is available` | 显卡算力与 torch wheel 架构不匹配 | [12-no-kernel-image.md](cases/12-no-kernel-image.md) |
-| 13 | `OSError: [Errno 28] No space left on device` | 缓存 / 临时分区满或 inode 用尽 | [13-no-space-left.md](cases/13-no-space-left.md) |
+| 11 | `Expected all tensors to be on the same device` | 模型在 GPU、输入 / 标签在 CPU | [11-device-mismatch.md](cases/11-runtimeerror-expected-all-tensors-same-device-cuda-0-cpu.md) |
+| 12 | `CUDA error: no kernel image is available` | 显卡算力与 torch wheel 架构不匹配 | [12-no-kernel-image.md](cases/12-cuda-error-no-kernel-image-is-available.md) |
+| 13 | `OSError: [Errno 28] No space left on device` | 缓存 / 临时分区满或 inode 用尽 | [13-no-space-left.md](cases/13-oserror-errno-28-no-space-left-on-device.md) |
 
 三条都没解决？开 [免费诊断 Issue](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=free-diagnosis.md)，先确认问题值不值得付费，别直接买服务。
 

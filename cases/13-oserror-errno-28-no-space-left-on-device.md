@@ -1,4 +1,4 @@
-# 13 · No space left on device（磁盘或 inode 满）
+# 13 · OSError: [Errno 28] No space left on device（磁盘或 inode 满）
 
 **现象**
 
