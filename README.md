@@ -1,5 +1,7 @@
 # AI 环境急救包 · ai-env-first-aid
 
+> **三档报价 / 交付天数 / 验收方式 / 3 份交付样例：[SERVICE.md](./SERVICE.md)** —— 一页看完再决定。
+
 > **三档入口**
 >
 > - **免费诊断**：[提交免费诊断 Issue（模板）](https://github.com/autumnpyfaheyjjd32-jpg/ai-env-first-aid/issues/new?template=free-diagnosis.md) —— 不收费、不连机器，只回问题类型 + 最多 3 条下一步命令。
